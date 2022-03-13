@@ -1,0 +1,99 @@
+body {
+    background: rgb(175, 171, 171);
+}
+
+.container {
+    width: 600px;
+    height: 440px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 60px;
+    padding: 0;
+}
+
+li{
+    padding: 15px;
+    text-align: center;
+}
+
+.left {
+    width: 300px;
+    float: left;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.right{
+    width: 300px;
+    float: right;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+form {
+    width: 600px;
+    height: 336px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+input:not([type="checkbox"]) {
+    width: 500px;
+    height: 55px;
+    border-radius: 0.25em;
+    margin: 25px 20px 10px;
+    font-size: 1rem;
+    border: 1px solid #d2d8d8;
+    padding-left: 60px;
+}
+
+input[type="email"] {
+    background: url(https://img.icons8.com/ios-glyphs/30/000000/globe-earth--v1.png) no-repeat scroll 13px 13px;
+    padding-left: 50px;
+}
+
+input[type="password"] { 
+     background: url(https://img.icons8.com/material-sharp/24/000000/lock--v1.png) no-repeat scroll 13px 13px;
+     padding-left: 50px;
+}
+
+input[type="checkbox"] {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+button {
+    height: 50px;
+    width: 552px;
+    margin: 40px 25px;
+    background: #3599ae;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 0.25em;
+    border: none;
+}
+
+a {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 6px 15px;
+    border-left: 1px solid #d2d8d8;
+    top: 270px;
+    color: #343642;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    left: 950px;
+}
