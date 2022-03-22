@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+</head>
 </head>
 <body>
     <div class="container">
         <ul class="group">
              <li class="left">
-                   Sign in
+                  <a href="subpages/sign-in.html"> Sign in</a>
             </li>
             <li class="right">
-                   New account
+                  <a href="subpages/new-account.html"> New account</a>
             </li>
          </ul>
         <form action="">
-            <label for="">
+            <label class="mail">
                 <input type="email" name="email" placeholder="E-mail">
             </label>
             <label for="">
+                <i class='fas fa-key'></i>
                 <input type="password" name="password" placeholder="Password">
-                <a href="">Hide</a>
+                <a href="" class="hide">Hide</a>
             </label>
              <label for="">
                  <input type="checkbox" name="remember">
@@ -34,3 +38,4 @@
     </div>
 </body>
 </html>
+

@@ -1,19 +1,22 @@
 body {
     background: rgb(175, 171, 171);
+    font-family: verdana;
+    font-size: 90%;
 }
 
 .container {
     width: 600px;
-    height: 440px;
+    height: 412px;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
+    border-radius: 6px;
 }
 
 ul {
     list-style-type: none;
-    font-size: 20px;
     margin-top: 60px;
     padding: 0;
+    margin-bottom: 37px;
 }
 
 li{
@@ -24,14 +27,19 @@ li{
 .left {
     width: 300px;
     float: left;
-    margin-top: 20px;
+    margin-top: 26px;
     padding: 0;
+}
+
+.left a,
+.right a {
+    text-decoration: none;
 }
 
 .right{
     width: 300px;
     float: right;
-    margin-top: 20px;
+    margin-top: 26px;
     padding: 0;
 }
 
@@ -46,37 +54,46 @@ form {
     height: 336px;
     background: rgb(255, 255, 255);
     margin: 0 auto;
+    position: relative;
 }
 
 input:not([type="checkbox"]) {
-    width: 500px;
-    height: 55px;
+    width: 470px;
+    height: 50px;
     border-radius: 0.25em;
-    margin: 25px 20px 10px;
+    margin: 20px 30px 10px;
     font-size: 1rem;
     border: 1px solid #d2d8d8;
     padding-left: 60px;
 }
 
-input[type="email"] {
-    background: url(https://img.icons8.com/ios-glyphs/30/000000/globe-earth--v1.png) no-repeat scroll 13px 13px;
-    padding-left: 50px;
+.mail::before {
+    content: "\2709";
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    left: 55px;
+    top: 33px;
+    font-size: 1.3rem;
 }
 
-input[type="password"] { 
-     background: url(https://img.icons8.com/material-sharp/24/000000/lock--v1.png) no-repeat scroll 13px 13px;
-     padding-left: 50px;
+.fas::before {
+    content: "";
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    top: 125px;
+    left: 60px;
 }
 
 input[type="checkbox"] {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin: 22px 0 5px 30px;
 }
 
 button {
     height: 50px;
-    width: 552px;
-    margin: 40px 25px;
+    width: 548px;
+    margin: 30px 28px;
     background: #3599ae;
     color: white;
     font-weight: 900;
@@ -85,15 +102,13 @@ button {
     border: none;
 }
 
-a {
+.hide {
     display: inline-block;
     position: absolute;
     right: 0;
     padding: 6px 15px;
     border-left: 1px solid #d2d8d8;
-    top: 270px;
+    top: 129px;
     color: #343642;
     transform: translateY(-50%);
-    font-size: 1rem;
-    left: 950px;
-}
+    left: 495px;
