@@ -11,29 +11,68 @@
 </head>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <a href="#show_container" class="nav-sign-in">tu klikni</a>
+    </nav>
+    <div id="show_container" class="container">
         <ul class="group">
-             <li class="left">
-                  <a href="subpages/sign-in.html"> Sign in</a>
+             <li id="sign_in_list" class="left">
+                  <a href="#item1"> Sign in</a>
             </li>
-            <li class="right">
-                  <a href="subpages/new-account.html"> New account</a>
+
+            <li id="new_account_list" class="right">
+                  <a href="#item2"> New account</a>
             </li>
          </ul>
-        <form action="">
-            <label class="mail">
-                <input type="email" name="email" placeholder="E-mail">
-            </label>
-            <label for="">
-                <i class='fas fa-key'></i>
-                <input type="password" name="password" placeholder="Password">
-                <a href="" class="hide">Hide</a>
-            </label>
-             <label for="">
-                 <input type="checkbox" name="remember">
-                  Remember me
-            </label>
+
+        <form action="" id="item2">
+            <div>
+                <label class="mail">
+                    <input type="email" name="email" placeholder="E-mail">
+                </label>
+            </div>
+            <div>
+                <label class="kye">
+                     <i class='fas fa-key kluc'></i>
+                    <input type="password" name="password" placeholder="Password">
+                    <a href="" class="hide">Hide</a>
+                </label>
+            </div>  
+            <div>
+                 <label for="">
+                     <input type="checkbox" name="remember">
+                      Remember me
+                </label>
+            </div>      
            <button>Login</button>
+        </form>
+
+        <form action="" id="item1" class="form2">
+            <div>
+                <label for="">
+                    <i class='fas fa-user' class="user"></i>
+                    <input type="text" name="name" placeholder="Username">
+                </label>
+            </div>
+            <div>
+                <label class="mail2">
+                    <input type="email" name="email" placeholder="E-mail">
+                </label>
+             </div>
+             <div class="last-box">
+                <label for="">
+                    <i class='fas fa-key kye2'></i>
+                    <input type="password" name="password" placeholder="Password">
+                    <a href="" class="hide2">Hide</a>
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    <input type="checkbox" name="iagree">
+                     I agree to the 
+                </label>
+            </div>
+           <button>Create account</button>
         </form>
     </div>
 </body>

@@ -10,6 +10,11 @@ body {
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
     border-radius: 6px;
+    display: none;
+}
+
+#show_container:target{
+    display: block;
 }
 
 ul {
@@ -43,6 +48,26 @@ li{
     padding: 0;
 }
 
+#sign_in_list:target {
+    background:pink
+}
+
+#new_account_list:target {
+    background: yellow;
+}
+
+#item2:target .left {
+    background: blue;
+}
+
+#sign_in_list {
+   background: red;
+}
+
+#new_account_list{
+    background: green;
+}
+
 .group::after {
     content: "";
     clear: both;
@@ -61,7 +86,7 @@ input:not([type="checkbox"]) {
     width: 470px;
     height: 50px;
     border-radius: 0.25em;
-    margin: 20px 30px 10px;
+    margin: 20px 31px 10px;
     font-size: 1rem;
     border: 1px solid #d2d8d8;
     padding-left: 60px;
@@ -76,14 +101,12 @@ input:not([type="checkbox"]) {
     top: 33px;
     font-size: 1.3rem;
 }
-
-.fas::before {
-    content: "";
+    
+.kluc::before {
     width: 20px;
     position: absolute;
-    height: 20px;
-    top: 125px;
-    left: 60px;
+    top: 140px;
+    left: 58px;
 }
 
 input[type="checkbox"] {
@@ -108,8 +131,85 @@ button {
     right: 0;
     padding: 6px 15px;
     border-left: 1px solid #d2d8d8;
-    top: 129px;
+    top: 146px;
     color: #343642;
     transform: translateY(-50%);
     left: 495px;
+    text-decoration: none;
+}
+
+#item1:target {
+    display: none;
+}
+
+#item2:target {
+    display: none;
+}
+
+#item1 {
+    display: block;
+}
+
+#item2 {
+    display: block;
+}
+
+.form2 {
+    height: 424px;
+    width: 600px;
+    position: relative;
+}
+
+.form2 input:not([type="checkbox"]){
+    margin: 20px 31px 10px;
+}
+
+.fa-user::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 56px;
+    left: 63px;
+}
+
+.mail2::before {
+    content: "\2709";
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    left: 55px;
+    top: 132px;
+    font-size: 1.3rem;
+}
+
+.kye2::before {
+        content: "";
+        width: 20px;
+        position: absolute;
+        height: 20px;
+        top: 225px;
+        left: 61px;
+}
+
+.hide2 {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 6px 15px;
+    border-left: 1px solid #d2d8d8;
+    top: 233px;
+    color: #343642;
+    transform: translateY(-50%);
+    left: 495px;
+    text-decoration: none;
+}
+
+.last-box {
+    margin-top: -17px; 
+}
+
+.nav-sign-in {
+    background: red;
+    border-radius: 10px;
 }
