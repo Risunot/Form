@@ -1,27 +1,33 @@
+:root {
+    --light-gray: #d2d8d8;
+    --text-color: #809191;
+    --container-color: rgb(255, 255, 255);
+    --button-color: #3599ae;
+}
+  
 body {
     background: rgb(175, 171, 171);
     font-family: verdana;
     font-size: 90%;
+    color: var(--text-color);
+}
+
+*:focus {
+    outline: none;
 }
 
 .container {
     width: 600px;
     height: 412px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--container-color);
     margin: 0 auto;
     border-radius: 6px;
-    display: none;
-}
-
-#show_container:target{
-    display: block;
 }
 
 ul {
     list-style-type: none;
     margin-top: 60px;
     padding: 0;
-    margin-bottom: 37px;
 }
 
 li{
@@ -32,7 +38,6 @@ li{
 .left {
     width: 300px;
     float: left;
-    margin-top: 26px;
     padding: 0;
 }
 
@@ -44,28 +49,24 @@ li{
 .right{
     width: 300px;
     float: right;
-    margin-top: 26px;
     padding: 0;
 }
 
-#sign_in_list:target {
-    background:pink
+#new_account_list a,
+#sign_in_list a {
+    height: 100%;
+    display: block;
+    line-height: 4rem;
+    color: var(--text-color);
+    background-color: var(--light-gray);
 }
 
-#new_account_list:target {
-    background: yellow;
+#sign_in_list a {
+    box-shadow: inset -4px -3px 6px #91848475;
 }
 
-#item2:target .left {
-    background: blue;
-}
-
-#sign_in_list {
-   background: red;
-}
-
-#new_account_list{
-    background: green;
+#new_account_list a {
+    box-shadow: inset 4px -3px 6px #91848475;
 }
 
 .group::after {
@@ -77,7 +78,7 @@ li{
 form {
     width: 600px;
     height: 336px;
-    background: rgb(255, 255, 255);
+    background: var(--container-color);
     margin: 0 auto;
     position: relative;
 }
@@ -88,8 +89,9 @@ input:not([type="checkbox"]) {
     border-radius: 0.25em;
     margin: 20px 31px 10px;
     font-size: 1rem;
-    border: 1px solid #d2d8d8;
+    border: 1px solid var(--light-gray);
     padding-left: 60px;
+    box-shadow: inset 0 0 10px #c5b8b8;
 }
 
 .mail::before {
@@ -117,12 +119,13 @@ button {
     height: 50px;
     width: 548px;
     margin: 30px 28px;
-    background: #3599ae;
+    background: var(--button-color);
     color: white;
     font-weight: 900;
     cursor: pointer;
     border-radius: 0.25em;
     border: none;
+    box-shadow: inset 0px 0px 10px #101010e3;
 }
 
 .hide {
@@ -130,37 +133,41 @@ button {
     position: absolute;
     right: 0;
     padding: 6px 15px;
-    border-left: 1px solid #d2d8d8;
+    border-left: 1px solid var(--light-gray);
     top: 146px;
-    color: #343642;
+    color: var(--text-color);
     transform: translateY(-50%);
     left: 495px;
     text-decoration: none;
 }
-
+/* pri kliknuti na prvy link dostane display block prvy formular */
 #item1:target {
-    display: none;
-}
-
-#item2:target {
-    display: none;
-}
-
-#item1 {
     display: block;
 }
-
+/* pri kliknuti na druhy link dostane display block druhy formular */
+#item2:target {
+    display: block;
+}
+/* pri nacitani stranky je prvy neviditelny*/
+#item1 {
+    display: none;
+}
+/* pri nacitani stranky  je druhy viditelny*/
 #item2 {
     display: block;
 }
+/* iba nasledujuci surodenec moze byt takto cez + targetnuty */
+#item1:target + #item2 {
+    display: none;
+}
 
-.form2 {
+.form1 {
     height: 424px;
     width: 600px;
     position: relative;
 }
 
-.form2 input:not([type="checkbox"]){
+.form1 input:not([type="checkbox"]){
     margin: 20px 31px 10px;
 }
 
@@ -184,12 +191,12 @@ button {
 }
 
 .kye2::before {
-        content: "";
-        width: 20px;
-        position: absolute;
-        height: 20px;
-        top: 225px;
-        left: 61px;
+    content: "";
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    top: 225px;
+    left: 61px;
 }
 
 .hide2 {
@@ -197,9 +204,9 @@ button {
     position: absolute;
     right: 0;
     padding: 6px 15px;
-    border-left: 1px solid #d2d8d8;
+    border-left: 1px solid var(--light-gray);
     top: 233px;
-    color: #343642;
+    color: var(--text-color);
     transform: translateY(-50%);
     left: 495px;
     text-decoration: none;
@@ -209,7 +216,9 @@ button {
     margin-top: -17px; 
 }
 
-.nav-sign-in {
-    background: red;
-    border-radius: 10px;
+#new_account_list.active a,
+#sign_in_list.active a {
+    background: #fff;
+    box-shadow: none;
 }
+

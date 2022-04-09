@@ -8,46 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="icons/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 </head>
 <body>
-    <nav>
-        <a href="#show_container" class="nav-sign-in">tu klikni</a>
-    </nav>
+    <script>
+        // pri nacitani stranky - ked je dokument(cela stranka) ready
+        $(document).ready(function() { 
+            // pri kliknuti na li s classou tab 
+            $(".tab").click(function () {
+                // na elemente s classou tab vymaz klasu active
+                $(".tab").removeClass("active");
+            // tento this reprezentuje classu tab
+            $(this).addClass("active");   
+            });
+        });
+
+    </script>
     <div id="show_container" class="container">
         <ul class="group">
-             <li id="sign_in_list" class="left">
-                  <a href="#item1"> Sign in</a>
+             <li id="sign_in_list" class="left tab active">
+                  <a href="#item2"> Sign in</a>
             </li>
 
-            <li id="new_account_list" class="right">
-                  <a href="#item2"> New account</a>
+            <li id="new_account_list" class="right tab">
+                  <a href="#item1"> New account</a>
             </li>
          </ul>
 
-        <form action="" id="item2">
-            <div>
-                <label class="mail">
-                    <input type="email" name="email" placeholder="E-mail">
-                </label>
-            </div>
-            <div>
-                <label class="kye">
-                     <i class='fas fa-key kluc'></i>
-                    <input type="password" name="password" placeholder="Password">
-                    <a href="" class="hide">Hide</a>
-                </label>
-            </div>  
-            <div>
-                 <label for="">
-                     <input type="checkbox" name="remember">
-                      Remember me
-                </label>
-            </div>      
-           <button>Login</button>
-        </form>
-
-        <form action="" id="item1" class="form2">
+        <form action="" id="item1" class="form1">
             <div>
                 <label for="">
                     <i class='fas fa-user' class="user"></i>
@@ -73,6 +62,28 @@
                 </label>
             </div>
            <button>Create account</button>
+        </form>
+
+        <form action="" id="item2">
+            <div>
+                <label class="mail">
+                    <input type="email" name="email" placeholder="E-mail">
+                </label>
+            </div>
+            <div>
+                <label class="kye">
+                     <i class='fas fa-key kluc'></i>
+                    <input type="password" name="password" placeholder="Password">
+                    <a href="" class="hide">Hide</a>
+                </label>
+            </div>  
+            <div>
+                 <label for="">
+                     <input type="checkbox" name="remember">
+                      Remember me
+                </label>
+            </div>      
+           <button>Login</button>    
         </form>
     </div>
 </body>
